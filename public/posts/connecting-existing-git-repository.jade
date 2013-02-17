@@ -1,0 +1,51 @@
+h2: a(href="/posts/connecting-existing-git-repository") Connecting existing git repository with an existing remote github repository
+.excerpt This often happens to me whenever I start a new project: I start working locally on a brand new project I go to GitHub and create a new repository for my project Confused, start Google-ing how to connect the two of them How do I connect them? Here’s what you need to do to connect [...]
+
+p This often happens to me whenever I start a new project:
+ol
+  li I start working locally on a brand new project
+  li I go to GitHub and create a new repository for my project
+  li Confused, start Google-ing how to connect the two of them
+
+h2 How do I connect them?
+p Here&rsquo;s what you need to do to connect your local git repo with your remote github repo:
+pre
+  | cd /my/local/project/path/
+  | git init
+  | git remote add --track master origin git@github.com:jorgepedret/foo.git
+                  
+ol
+  li CD into your local project directory
+  li Run git init, if you haven&rsquo;t ran it yet
+  li Connect the remote repo with your local repo
+p Done!
+p Now you can commit your changes, pull rebase and then push to your remote repository
+
+
+pre
+  | git add .
+  | git commit -m "Initial commit"
+  | git pull --rebase origin master
+  | git push origin master
+
+h2 Another way to do it
+p Here&rsquo;s another way to connect your local repo with a remote github repo:
+ol
+  li Rename your local project directory
+  li Clone your GitHub repo specifying the original directory
+  li Move the original content to the new repository
+  li Delete the temporary directory created in line 1
+pre
+  | mv my_project my_project_temp
+  | git clone https://github.com/jorgepedret/foo.git my_project
+  | cp -r ./my_project_temp/. my_project
+  | rm -r ./my_project_temp
+
+h2 What&rsquo;s the correct way to do it?
+p The correct way to do it is to start your GitHub repository before starting to code. That way you can simply use git clone and then just start working on it.
+p
+  | That&rsquo;s it! Thanks to
+  a(href='http://caiustheory.com/adding-a-remote-to-existing-git-repo') Caius Theory
+  | and
+  a(href='http://ciaranwal.sh/') Ciarán Walsh
+  | for helping me find a solution for this problem.
