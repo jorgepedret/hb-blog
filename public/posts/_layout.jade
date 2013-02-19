@@ -1,0 +1,14 @@
+extend ../_main-layout
+
+block title
+  title Yo! what the hell?
+
+block content
+  - locals.slug = current.path[1];
+  != partial("../_post.jade", locals)
+
+block phone_nav
+  != partial("../_phone-nav")
+
+block aside
+  != partial("../_aside")

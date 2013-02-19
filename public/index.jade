@@ -1,3 +1,6 @@
-each post, slug in globals.public.posts.data
-  - post.slug = slug;
-  != partial("_post.jade", post)
+extend _main-layout
+
+block content
+  each post, slug in globals.public.posts.data
+    - post.slug = slug;
+    != partial("_post.jade", post)
