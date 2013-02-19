@@ -1,36 +1,34 @@
 {
-  "posts": {
-    "cusp-of-broader-adoption-of-js": {
-      "type": "quote",
-      "date": {
-        "day": "15",
-        "month": "dec",
-        "year": "2011"
-      }
-    },
-    "connecting-existing-git-repository": {
-      "type": "post",
-      "date": {
-        "day": "15",
-        "month": "dec",
-        "year": "2011"
-      }
-    },
-    "dynamic-file-paths-using-require-js": {
-      "type": "post",
-      "date": {
-        "day": "15",
-        "month": "dec",
-        "year": "2011"
-      }
-    },
-    "if-you-dont-go-after-what-you-want": {
-      "type": "quote",
-      "date": {
-        "day": "15",
-        "month": "dec",
-        "year": "2011"
-      }
+  "cusp-of-broader-adoption-of-js": {
+    "type": "quote",
+    "date": {
+      "day": "15",
+      "month": "dec",
+      "year": "2011"
+    }
+  },
+  "connecting-existing-git-repository": {
+    "type": "post",
+    "date": {
+      "day": "15",
+      "month": "dec",
+      "year": "2011"
+    }
+  },
+  "dynamic-file-paths-using-require-js": {
+    "type": "post",
+    "date": {
+      "day": "15",
+      "month": "dec",
+      "year": "2011"
+    }
+  },
+  "if-you-dont-go-after-what-you-want": {
+    "type": "quote",
+    "date": {
+      "day": "15",
+      "month": "dec",
+      "year": "2011"
     }
   }
 }

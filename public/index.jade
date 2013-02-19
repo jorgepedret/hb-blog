@@ -1,11 +1,3 @@
-each post, slug in globals.public.posts.data.posts
-  div(class="post post-#{ post.type }")
-    .post-meta
-      .post-type
-        i(class="icon-#{ post.type } icon-2x")
-      .post-date
-        span.month #{ post.date.month }
-        span.day #{ post.date.day }
-        span.year #{ post.date.year }
-    .post-content
-      != partial("posts/" + slug + ".jade")
+each post, slug in globals.public.posts.data
+  - post.slug = slug;
+  != partial("_post.jade", post)

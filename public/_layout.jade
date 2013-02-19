@@ -11,7 +11,11 @@ html(lang="en")
       .container-fluid
         .row-fluid
           .span8.main
-            != yield
+            - if (current.path[0] === "posts")
+              - locals.slug = current.path[1]
+              != partial("_post.jade", locals);
+            - else
+              != yield
           != partial("_aside")
     script(src="#{ globals.public.data.jquery }")
     script(src="#{ globals.public.data.bootstrap.js }")

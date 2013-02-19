@@ -1,0 +1,10 @@
+div(class="post post-#{ type }")
+  .post-meta
+    .post-type
+      i(class="icon-#{ type } icon-2x")
+    .post-date
+      span.month #{ date.month }
+      span.day #{ date.day }
+      span.year #{ date.year }
+  .post-content
+    != partial("posts/" + slug + ".jade")
