@@ -1,14 +1,10 @@
-extend ../_main-layout
-
-block title
-  title Yo! what the hell?
-
-block content
-  - locals.slug = current.path[1];
-  != partial("../_post.jade", locals)
-
-block phone_nav
-  != partial("../_phone-nav")
-
-block aside
-  != partial("../_aside")
+div(class="post post-#{ type }")
+  .post-meta
+    .post-type
+      i(class="icon-#{ type } icon-2x")
+    .post-date
+      span.month #{ date.month }
+      span.day #{ date.day }
+      span.year #{ date.year }
+  .post-content
+    != partial("posts/" + slug + ".jade")

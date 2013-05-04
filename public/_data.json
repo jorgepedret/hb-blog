@@ -1,8 +1,8 @@
 {
-  "jquery": "/bootstrap/docs/assets/js/jquery.js",
+  "jquery": "/_bootstrap/docs/assets/js/jquery.js",
   "bootstrap": {
-    "js": "/bootstrap/docs/assets/js/bootstrap.js",
-    "css": "/bootstrap/less/bootstrap.less",
-    "css-responsive": "/bootstrap/less/responsive.less"
+    "js": "/_bootstrap/docs/assets/js/bootstrap.js",
+    "css": "/_bootstrap/less/bootstrap.less",
+    "css-responsive": "/_bootstrap/less/responsive.less"
   }
 }

@@ -1,0 +1,43 @@
+!!!5
+html(lang="en")
+  head
+    title Harp Blog Boilerplate
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,800')
+    link(rel="stylesheet", href="/fontawesome/less/font-awesome.css")
+    link(rel="stylesheet", href="/css/main.css")
+  body(class="page-#{ current.path[0] } #{ current.path.join('-') }")
+    .visible-phone
+      .navbar.navbar-static-top
+        .navbar-inner
+          .container-fluid
+            a.nav-home.navbar-text(href="/")
+              i.icon-home.icon-2x
+    article#content
+      .container-fluid
+        .row-fluid
+          .span8.main
+            if current.path[0] === "posts"
+              div(class="post post-#{ type }")
+                .post-meta
+                  .post-type
+                    i(class="icon-#{ type } icon-2x")
+                  .post-date
+                    span.month #{ date.month }
+                    span.day #{ date.day }
+                    span.year #{ date.year }
+                .post-content
+                  != yield
+            else
+              != yield
+          .offset1.span3.aside
+            p: a(href="/"): img.aside-profile-img.aside-img(src="/img/wall_square_george_squareIMG_0254-Edit.jpg")
+            p: strong Web Engineer &amp; Designer
+            p: small I live in Vancouver, Canada, where I build websites for startups and small businesses.
+
+            hr 
+
+            p: img.aside-img(src="/img/harp-logo.png")
+            p: small Powered by <a href="http://harp.io/">Harp Platform</a>
+    script(src="#{ globals.public.data.jquery }")
+    script(src="#{ globals.public.data.bootstrap.js }")
+    script(src="/js/app.js")

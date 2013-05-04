@@ -1,6 +1,4 @@
-extend _main-layout
-
-block content
-  each post, slug in globals.public.posts.data
-    - post.slug = slug;
-    != partial("_post.jade", post)
+each post, slug in globals.public.posts.data
+  - post.slug = slug;
+  - post.layout = "_post.jade";
+  != partial("/posts/" + slug, post)
