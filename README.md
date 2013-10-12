@@ -24,7 +24,7 @@ _This is a boilerplate to use with the [Harp Platform](http://harp.io/) and [Har
 2. `public` directory is required.
 3. `public` directory maps to URLs.
 4. Files will only be served if they are in the `public` directory.
-5. Files with extension `.less`, `.sass`, `.scss`, `.styl`, `.coffee`, and `.jade` will be compiled to their respective output formats.
+5. Files with extension `.less`, `.styl`, `.coffee`, and `.jade` will be compiled to their respective output formats.
 6. Mime type may be specified with additional namespace in file name.
 7. Files that start with underscore are ignored by server.
 8. Files named `_data.json` make data available to templates.
